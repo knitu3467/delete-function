@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .delete, .edit {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <ul id="myList">
+    <li>First item <span class="delete" onclick="deleteItem(this)">Delete</span> <span class="edit" onclick="editItem(this)">Edit</span></li>
+    <li>Second item <span class="delete" onclick="deleteItem(this)">Delete</span> <span class="edit" onclick="editItem(this)">Edit</span></li>
+    <li>Third item <span class="delete" onclick="deleteItem(this)">Delete</span> <span class="edit" onclick="editItem(this)">Edit</span></li>
+  </ul>
+
+  <script>
+    function deleteItem(element) {
+      var listItem = element.parentNode;
+      listItem.parentNode.removeChild(listItem);
+    }
+
+    function editItem(element) {
+      // Add your edit functionality here
+      console.log("Edit button clicked!");
+    }
+  </script>
+</body>
+</html>
